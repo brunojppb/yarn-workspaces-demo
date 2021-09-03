@@ -1,0 +1,8 @@
+{
+  "name": "@goldfish/common",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "lodash": "4.17.21"
+  }
+}

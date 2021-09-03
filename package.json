@@ -1,0 +1,13 @@
+{
+  "name": "workspaces-demo",
+  "version": "1.0.0",
+  "description": "Trying out yarn workspaces and Webpack",
+  "main": "index.js",
+  "repository": "https://github.com/brunojppb/yarn-workspaces-demo",
+  "author": "Bruno Paulino",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
