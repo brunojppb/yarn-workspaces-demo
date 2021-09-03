@@ -13,7 +13,7 @@
   "scripts": {
     "test": "lerna run test",
     "test-common": "lerna run test --scope=@goldfish/common",
-    "release": "lerna version"
+    "release": "lerna version patch --amend --force-git-tag --yes"
   },
   "dependencies": {
     "lerna": "^4.0.0"
