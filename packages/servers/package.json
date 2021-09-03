@@ -1,6 +1,6 @@
 {
   "name": "@goldfish/servers",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "scripts": {
     "test": "echo Testing server version $npm_package_version 💿..."
