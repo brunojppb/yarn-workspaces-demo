@@ -1,0 +1,27 @@
+name: Release modified packages
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+jobs:
+  tag:
+    name: Bump patch version and tag the most recent commit
+    if: ${{ github.event.pull_request.merged == true }}
+    runs-on: ubuntu-latest
+    env:
+      node-version: 14.x
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: "0"
+      - name: Setup Node ${{ env.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.node-version }}
+      - run: git config --global user.email "github-action@noreply.github.com"
+      - run: git config --global user.name "GitHub Actions"
+      - name: Generate new version
+        run: yarn dlx lerna version patch --amend --force-git-tag --yes
+      - name: Force push
+        run: git push --atomic --follow-tags --force-with-lease
