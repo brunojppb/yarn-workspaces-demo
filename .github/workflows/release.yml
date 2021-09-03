@@ -21,7 +21,9 @@ jobs:
           node-version: ${{ env.node-version }}
       - run: git config --global user.email "github-action@noreply.github.com"
       - run: git config --global user.name "GitHub Actions"
+      - name: Install dependencies
+        run: yarn install
       - name: Generate new version
-        run: yarn dlx lerna version patch --amend --force-git-tag --yes
+        run: yarn run release
       - name: Force push
         run: git push --atomic --follow-tags --force-with-lease
