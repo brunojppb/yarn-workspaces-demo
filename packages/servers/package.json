@@ -1,12 +1,12 @@
 {
   "name": "@goldfish/servers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "src/index.js",
   "scripts": {
     "test": "echo Testing server version $npm_package_version 💿..."
   },
   "dependencies": {
-    "@goldfish/common": "^1.0.1",
+    "@goldfish/common": "^1.0.2",
     "lodash": "4.17.21"
   }
 }
