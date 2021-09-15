@@ -16,6 +16,14 @@
     "release": "lerna version patch --amend --force-git-tag --yes"
   },
   "dependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^2.1.0"
+  },
+  "changelog": {
+    "labels": {
+      "feature": "New Feature",
+      "bug": "Bug Fix",
+      "dependencies": "Dependency Updates"
+    }
   }
 }

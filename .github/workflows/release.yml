@@ -23,6 +23,12 @@ jobs:
       - run: git config --global user.name "GitHub Actions"
       - name: Install dependencies
         run: yarn install
+
+      - name: Show Changelog
+        run: npx lerna-changelog
+        env:
+          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate new version
         run: yarn run release
       - name: Force push
